@@ -19,7 +19,7 @@
 
 ## 1. Building Blocks
 
-_Using the 3-pipeline design _ ↓
+Using the 3-pipeline design ↓
 
 ### 1.1. Training Pipeline
 
