@@ -1,5 +1,7 @@
 # Real-Time Financial Advisor <div align="center">
 
+![User Interface](media/financial_bot_gradio_ui.png)
+gir
 ## Table of Contents
 
 - [1. Building Blocks](#1-building-blocks)
