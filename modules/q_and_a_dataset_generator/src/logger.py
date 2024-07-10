@@ -1,4 +1,4 @@
-from logging
+import logging
 from typing import Optional
 
 def get_console_logger(name: Optional[str] = 'tutorial') -> logging.Logger:

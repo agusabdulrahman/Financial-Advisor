@@ -1,11 +1,5 @@
 # Real-Time Financial Advisor <div align="center">
 
-<div align="center">
-    <h2>LLMs  </h2>
-    <h1>Real-Time Financial Advisor</h1>
-    <i>by <a href="https://github.com/agusabdulrahman">Agus Abdul Rahman</a></i>
-</div>
-
 ## Table of Contents
 
 - [1. Building Blocks](#1-building-blocks)
