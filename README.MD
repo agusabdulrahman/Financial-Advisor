@@ -1,7 +1,11 @@
 # Real-Time Financial Advisor <div align="center">
 
-![User Interface](media/financial_bot_gradio_ui.png)
-gir
+
+<div align="center">
+  <img src="https://github.com/agusabdulrahman/Financial-Advisor/blob/main/media/financial_bot_gradio_ui.png">
+</div>
+
+  
 ## Table of Contents
 
 - [1. Building Blocks](#1-building-blocks)
@@ -25,8 +29,6 @@ Using the 3-pipeline design ↓
 
 ### 1.1. Training Pipeline
 
-### 1.1. Training Pipeline
-
 Training pipeline that:
 
 - loads a proprietary Q&A dataset
@@ -37,6 +39,38 @@ Training pipeline that:
 The **training pipeline** is **deployed** using [Beam](https://docs.beam.cloud/getting-started/quickstart?utm_source=thepauls&utm_medium=partner&utm_content=github) as a serverless GPU infrastructure.
 
 -> Found under the `modules/training_pipeline` directory.
+
+<details open>
+  <summary>Structur folder training pipeline</summary><br>
+
+```
+modules/
+├── training_pipeline/
+│ ├── .beamignore
+│ ├── .env.example
+│ ├── Makefile
+│ ├── README.md
+│ ├── logging.yaml
+│ ├── poetry.lock
+│ ├── pyproject.toml
+│ ├── requirements.txt
+│ └── tools/
+
+```
+
+  We can create an [Anyscale Workspace](https://docs.anyscale.com/develop/workspaces/get-started) using the [webpage UI](https://console.anyscale.com/o/madewithml/workspaces/add/blank).
+
+  ```md
+  - Workspace name: `madewithml`
+  - Project: `madewithml`
+  - Cluster environment name: `madewithml-cluster-env`
+  # Toggle `Select from saved configurations`
+  - Compute config: `madewithml-cluster-compute-g5.4xlarge`
+  ```
+
+  > Alternatively, we can use the [CLI](https://docs.anyscale.com/reference/anyscale-cli) to create the workspace via `anyscale workspace create ...`
+
+</details>
 
 #### 💻 Minimum Hardware Requirements
 
@@ -78,6 +112,38 @@ Inference pipeline that uses [LangChain](https://github.com/langchain-ai/langcha
 The **inference pipeline** is **deployed** using [Beam](https://docs.beam.cloud/deployment/rest-api?utm_source=thepauls&utm_medium=partner&utm_content=github) as a serverless GPU infrastructure, as a RESTful API. Also, it is wrapped under a UI for demo purposes, implemented in [Gradio](https://www.gradio.app/).
 
 -> Found under the `modules/financial_bot` directory.
+
+<details open>
+  <summary>Structur folder Inference Pipeline</summary><br>
+
+```
+modules/
+├── financial_bot/
+│ ├── financial_bot /
+│ |   ├─ __init__.py
+│ |   ├─ base.py
+│ |   ├─ chains.py
+│ |   ├─ constants.py
+│ |   ├─ embedings.py
+│ |   ├─ handlers.py
+│ |   ├─ langchain_bot.py
+│ |   ├─ models.py
+│ |   ├─ qdrant.py
+│ |   ├─ templete.py
+│ |   └─ utils.py
+│ ├── tools/
+│ |   ├─ bot.py
+│ |   └─ ui.py
+│ ├── .beamignore
+│ ├── .env.example
+│ ├── Makefile
+│ ├── README.md
+│ ├── logging.yaml
+│ ├── poetry.lock
+│ ├── pyproject.toml
+│ └── requirements.txt
+
+```
 
 #### 💻 Minimum Hardware Requirements
 
